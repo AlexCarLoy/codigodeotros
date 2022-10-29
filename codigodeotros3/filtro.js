@@ -7,10 +7,12 @@ const productos = [
   {nombre: "Bota azul", tipo: "bota", color: "azul", img: "./bota-azul.jpg"},
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
-
-const li = document.getElementsByName("lista-de-productos")
+//Cambie el getElementsByName por un getElementById
+const li = document.getElementById("lista-de-productos")
 const $i = document.querySelector('.input');
 
+//Se inicia una funcion
+const displayProductos = (productos) => {
 for (let i = 0; i < productos.length; i++) {
   var d = document.createElement("div")
   d.classList.add("producto")
@@ -26,6 +28,7 @@ for (let i = 0; i < productos.length; i++) {
   d.appendChild(imagen)
 
   li.appendChild(d)
+  }
 }
 
 displayProductos(productos)
